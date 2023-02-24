@@ -27,25 +27,21 @@ export default function Home() {
                 <p className='mb-5 py-2 px-4 text-center text-gray-500 '>You can now listen to millions of songs, audiobooks,
                   and podcasts on any device anywhere you like!</p>
               </div>
-              <div className='flex flex-row justify-around items-center'>
+              <div className='py-3 rounded-lg flex flex-row justify-around items-center bg-gray-100'>
                 <Image src={musicicon} alt='icon music'/>
-                  <div className=''>
+                  <div>
                     <h1 className='font-semibold text-sm'>Annual Plan</h1>
                     <p className='text-sm text-gray-500'>$59.99/year</p>
                   </div>
-                <a href='' className='cursor-pointer underline text-sm text-purple-900 font-semibold'>Change</a> 
+                <a href='' className='cursor-pointer underline text-sm text-purple-900 font-semibold hover:no-underline'>Change</a> 
               </div>
             </section>
 
             <footer className='flex flex-col justify-center items-center p-10'>
-              <button className='w-full p-3 bg-blue-800 rounded-lg text-white font-semibold mb-6'>Proceed to Payment</button>
-              <a className='text-gray-500 font-semibold' href=''>Cancel Order</a>
+              <button className='w-full p-3 bg-blue-800 rounded-lg text-white font-semibold mb-6  hover:bg-violet-600 hover:opacity-60'>Proceed to Payment</button>
+              <a className='text-gray-500 font-semibold hover:text-black hover:font-extrabold' href=''>Cancel Order</a>
             </footer>
-            
-
-          
-        </card>
-        
+        </card>  
       </main>
     </>
   )
