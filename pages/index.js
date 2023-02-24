@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Coustard, Inter } from '@next/font/google'
+import musicgirl from "../public/illustration-hero.svg"
+import musicicon from "../public/icon-music.svg"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,10 +16,35 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-slate-300  '>
-        <header className=''>
-          <h1>Hello World</h1>
-        </header>
+      <main className='bg-slate-300 w-screen h-screen flex justify-center items-center '>
+        <card className='bg-white max-w-sm rounded-xl'>
+            <header className=''>
+              <Image className='rounded-t-lg pb-7' src={musicgirl} alt='dance' />
+            </header>
+            <section className='py-2 px-9'>
+              <div className='flex flex-col justify-center items-center'>
+                <h1 className='font-bold text-2xl mb-5'>Order Summary</h1>
+                <p className='mb-5 py-2 px-4 text-center text-gray-500 '>You can now listen to millions of songs, audiobooks,
+                  and podcasts on any device anywhere you like!</p>
+              </div>
+              <div className='flex flex-row justify-around items-center'>
+                <Image src={musicicon} alt='icon music'/>
+                  <div className=''>
+                    <h1 className='font-semibold text-sm'>Annual Plan</h1>
+                    <p className='text-sm text-gray-500'>$59.99/year</p>
+                  </div>
+                <a href='' className='cursor-pointer underline text-sm text-purple-900 font-semibold'>Change</a> 
+              </div>
+            </section>
+
+            <footer className='flex flex-col justify-center items-center p-10'>
+              <button className='w-full p-3 bg-blue-800 rounded-lg text-white font-semibold mb-6'>Proceed to Payment</button>
+              <a className='text-gray-500 font-semibold' href=''>Cancel Order</a>
+            </footer>
+            
+
+          
+        </card>
         
       </main>
     </>
